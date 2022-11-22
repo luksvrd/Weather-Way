@@ -6,14 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./src/style.css" />
-    <title>Vite ➕ Tailwind</title>
+    <title>Weather Forecast</title>
   </head>
-  <body>
+  <body class="bg-gradient-to-r from-green-400 to-blue-500 text-xl">
     <h1
-      class="text-center text-3xl font-semibold text-red-500 md:text-5xl"
+      class="top-02 bg-emerald-400 p-4 text-center text-3xl font-semibold text-sky-900 md:text-6xl"
     >
-      Hello
+      Weather Dashboard
     </h1>
+  </header>
+  <div
+    class="box-sizing: border-box m-4 flex grid-cols-2 grid-rows-2 justify-center gap-4 border-8 border-pink-400 p-2"
+  >
+    <aside
+      class="grid basis-1/4 justify-items-center border-8 border-blue-800"
+      id="aside"
+    >
+      <div class="citySearch m-4 border-8 border-lime-600 p-4">
+        <form>
+          <p class="m-4 font-bold">Search a City:</p>
+          <input
+            type="text"
+            id="city"
+            class="block w-full rounded-md border border-slate-300 bg-white py-2 pl-9 pr-3 shadow-lg placeholder:italic placeholder:text-slate-400 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
+            placeholder="City Name"
+          />
+          <button
+            id="search"
+            onclick="searchByCity()"
+            class="m-4 flex justify-self-center rounded-lg bg-indigo-500"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+      <div class="recentCities md:grid-rows-8 grid gap-4">
+        <h3 id="cities"></h3>
+        <h3 id="cities"></h3>
+        <h3 id="cities"></h3>
+        <h3 id="cities"></h3>
+        <h3 id="cities"></h3>
+      </div>
+    </aside>
+    <section class="weather basis-3/4 flex-row gap-y-4 border-8 border-black">
+      <div class="cityCurrent">
+        <h2
+          class="currentWeather m-4 border-2 border-red-400"
+          id="currentCityWeather"
+        >
+          Current Forecast
+        </h2>
+        <img src="/weathericon.png" alt="" id="img" />
+        <p class="mx-4" id="Ctemp"></p>
+        <p class="mx-4" id="Chumd"></p>
+        <p class="mx-4" id="Cwind"></p>
+      </div>
+
+      <div
+        class="futureWeather m-4 basis-3/4 border-2 border-yellow-400"
+        id="futureWeatherContainer"
+      >
+        <h2 class="border-2 border-orange-400">Five-Day Forecast:</h2>
+
+        <div
+          class="grid justify-center gap-4 border-4 border-red-400 md:grid-cols-5"
+          id="futureWeather"
+        ></div>
+      </div>
+    </section>
+  </div>
 
     <script type="module" src="./src/index.js"></script>
   </body>
