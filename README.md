@@ -13,7 +13,7 @@ This is a current & furure weather forecasting applicaiton. Upon loading, the us
 ## Website
 
 https://luksvrd-weather-forecast.netlify.app/
-![weather](https://github.com/luksvrd/Schedule-Me/blob/master/Assets/Schedule.png?raw=true)
+![weather](https://github.com/luksvrd/Weather-Way/blob/master/Assets/weather.png)
 
 ## Contributions
 
